@@ -1,6 +1,12 @@
-.navbar
-{
-    background-color: #052B72;
+/* main.css Milan Gadhiya 301297324 08/02/2023 */
+#navbarSupportedContent a {
+  color: #FFFFFF;
+}
+
+#navbarSupportedContent .active a {
+  background-color: #FFFFFF;
+  color: #052B72 !important;
+  border-radius: 5%;
 }
 
 .fullscreenDiv {
@@ -16,10 +22,9 @@
     position: absolute;
 }
 
-
 .fullscreenDiv .jumbotron {
     background-color: #052B72 !important;
-    position: fixed; /* or absolute */
+    position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -29,11 +34,6 @@
     color: #FFFFFF; 
     border: 1px solid #FFFFFF;
 }
-
-.bgstandardcolor {
-    background-color: #052B72 !important;
-}
-
 
 .about .info .btn {
     border: 2px solid black;
@@ -73,12 +73,6 @@ hr {
   margin-right: auto;
 }
 
-#navbarSupportedContent a {
-  color: #FFFFFF;
-}
-
-#navbarSupportedContent .active a {
-  background-color: #FFFFFF;
-  color: #052B72 !important;
-  border-radius: 5%;
+.bgstandardcolor {
+  background-color: #052B72 !important;
 }

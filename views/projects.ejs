@@ -1,64 +1,73 @@
+<!-- projects.ejs Milan Gadhiya 301297324 08/02/2023-->
 <%- include('partials/header', {title:'Projects'}); -%>
-<%- include('partials/top_nav') %>
+  <%- include('partials/top_nav') %>
 
-<!-- Start Projects Area -->
-<div class="my-5">
-  <div class="card-deck mb-4">
-    <div class="card">
-      <img class="card-img-top" src="/Assets/images/yelpcamp.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">YelpCamp</h5>
-        <p class="card-text">YelpCamp is a full-stack website project where users can create and review campgrounds.
-          This project is being created using Node.js, Express, MongoDB, and Bootstrap. Passport.js is used to handle authentication.
-        </p>
+    <!-- Start Projects Area -->
+    <div class="my-5">
+      <div class="card-deck mb-4">
+        <div class="card">
+          <img class="card-img-top" src="/Assets/images/yelpcamp.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">YelpCamp</h5>
+            <p class="card-text">YelpCamp is a full-stack website project where users can create and review campgrounds.
+              This project is being created using Node.js, Express, MongoDB, and Bootstrap. Passport.js is used to
+              handle authentication.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/Assets/images/home.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio Site</h5>
+            <p class="card-text">Here I have developed my portfolio website which includes description of some of my
+              projects which I have developed during my studies. I have worked in both front-end and back-end.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/Assets/images/instantmenu.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">InstantMenu</h5>
+            <p class="card-text">InstantMenu creates the outlets menu fully digital that is the menu will be viewed to
+              the customers just by scanning the QR Code of the outlet. InstantMenu provides two different ways to
+              create the menu.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="/Assets/images/home.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Portfolio Site</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-          content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="/Assets/images/instantmenu.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">InstantMenu</h5>
-        <p class="card-text">InstantMenu creates the outlets menu fully digital that is the menu will be viewed to the customers just by scanning the QR Code of the outlet. InstantMenu provides two different ways to create the menu.</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="/Assets/images/burger-builder.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">BurgerBuilder</h5>
-        <p class="card-text">Burger Builder is an application scripted in React and deployed on Firebase , where users can order burger by choosing ingredients.
-          Once they have created a burger, they can “checkout” and then keep track of their previous orders.
-        </p>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="/Assets/images/burger-builder.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">BurgerBuilder</h5>
+            <p class="card-text">Burger Builder is an application scripted in React and deployed on Firebase , where
+              users can order burger by choosing ingredients.
+              Once they have created a burger, they can “checkout” and then keep track of their previous orders.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/Assets/images/instantcatalog.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">InstantCatalog</h5>
+            <p class="card-text">InstantCatalog helps you to Create and share your digital product catalogs to all B2B
+              and B2C channels in real time.
+              Just as restaurants offer menus to influence their customers' food choices, retailers create product
+              catalogs to help consumers.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/Assets/images/restora.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Restora</h5>
+            <p class="card-text">Restora is a comprehensive restaurant management platform that works both online and
+              offline. This tool allows you to control Billing and KOT, Table management, Menu management, Customer
+              Relationship Management (CRM), Inventory Management etc.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <img class="card-img-top" src="/Assets/images/instantcatalog.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">InstantCatalog</h5>
-        <p class="card-text">InstantCatalog helps you to Create and share your digital product catalogs to all B2B and B2C channels in real time.
-          Just as restaurants offer menus to influence their customers' food choices, retailers create product catalogs to help consumers.
-        </p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="/Assets/images/restora.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Restora</h5>
-        <p class="card-text">Restora is a comprehensive restaurant management platform that works both online and offline. This tool allows you to control Billing and KOT, Table management, Menu management, Customer Relationship Management (CRM), Inventory Management etc.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Projects Area -->
+    <!-- End Projects Area -->
 
-<%- include('partials/bottom_nav'); -%>
-<%- include('partials/footer'); -%>
+    <%- include('partials/bottom_nav'); -%>
+      <%- include('partials/footer'); -%>
