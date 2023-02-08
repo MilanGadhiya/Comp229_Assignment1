@@ -1,7 +1,7 @@
 <!-- Main Navigation-->
 <nav class="navbar sticky-top navbar-expand-lg mb-4">
     <div class="container-fluid">
-      <a class="navbar-brand text-light" href="#">
+      <a class="navbar-brand text-light" href="/home">
         <img src="/Assets/images/website-favicon.png" width="30" height="30" alt="">EXPRESS PORTFOLIO SITE
       </a>
       <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse"
@@ -11,20 +11,44 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-light active" aria-current="page" href="/home">Home</a>
+          <% if(title == "Home"){ %>
+            <li class="nav-item active">
+          <%} else { %>
+            <li class="nav-item">
+          <%} %>
+            <a class="nav-link" aria-current="page" href="/home">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="/about">About</a>
+
+          <% if(title == "About"){ %>
+            <li class="nav-item active">
+          <%} else { %>
+            <li class="nav-item">
+          <%} %>
+            <a class="nav-link" aria-current="page" href="/about">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="/projects">Projects</a>
+          
+          <% if(title == "Projects"){ %>
+            <li class="nav-item active">
+          <%} else { %>
+            <li class="nav-item">
+          <%} %>
+            <a class="nav-link" aria-current="page" href="/projects">Projects</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="/services">Services</a>
+
+          <% if(title == "Services"){ %>
+            <li class="nav-item active">
+          <%} else { %>
+            <li class="nav-item">
+          <%} %>
+            <a class="nav-link" aria-current="page" href="/services">Services</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="/contact">Contact</a>
+
+          <% if(title == "Contact"){ %>
+            <li class="nav-item active">
+          <%} else { %>
+            <li class="nav-item">
+          <%} %>
+            <a class="nav-link" aria-current="page" href="/contact">Contact</a>
           </li>
         </ul>
       </div>

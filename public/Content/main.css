@@ -72,3 +72,13 @@ hr {
   margin-left: auto; 
   margin-right: auto;
 }
+
+#navbarSupportedContent a {
+  color: #FFFFFF;
+}
+
+#navbarSupportedContent .active a {
+  background-color: #FFFFFF;
+  color: #052B72 !important;
+  border-radius: 5%;
+}
