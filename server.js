@@ -8,6 +8,9 @@ var app = require('./app');
 var debug = require('debug')('assignment1:server');
 var http = require('http');
 
+const connectDB = require('./server/database/connection');
+// mongodb connection
+connectDB();
 /**
  * Get port from environment and store in Express.
  */
@@ -25,7 +28,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port, ()=>{console.log('Server is running on http://localhost:' +port)});
 server.on('error', onError);
 server.on('listening', onListening);
 

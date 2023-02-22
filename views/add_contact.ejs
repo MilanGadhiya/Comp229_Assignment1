@@ -1,0 +1,28 @@
+<!-- add_contact.ejs Milan Gadhiya 301297324 08/02/2023-->
+<%- include('partials/header', {title:'Add Contact'}); -%>
+<%- include('partials/top_nav') %>
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container" style="width: 50%;">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/contactlist" class="standardcolor"><i class="fas fa-angle-double-left"></i> All Contacts</a>
+           </div>
+        </div>
+        <div class="form-title text-center mb-3">
+            <h2 class="standardcolor">New Contact</h2>
+            <span class="standardcolor">Use the below form to create a new account</span>
+        </div>
+
+        <!-- add user form -->
+        <%- include('partials/_form') %>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('partials/bottom_nav'); -%>
+<%- include('partials/footer'); -%>
+<!-- /include footer -->

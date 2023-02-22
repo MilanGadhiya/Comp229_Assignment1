@@ -1,0 +1,43 @@
+<%- include('partials/header', {title:'Update Contact'}); -%>
+<%- include('partials/top_nav') %>
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/contactlist" class="standardcolor"><i class="fas fa-angle-double-left"></i> All Users</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="standardcolor">Update Contact</h2>
+            <span class="standardcolor">Use the below form to Update an contact</span>
+        </div>
+
+        <form method="POST" id="update_contact" class="standardcolor mb-5">
+            <div class="form-group new_contact">
+                <label>Name</label>
+                <input type="hidden" name="id" value="<%= contact._id %>">
+                <input type="text" class="form-control" name="name" value="<%= contact.name %>" placeholder="Mark Stoenis" required>
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" name="email" value="<%= contact.email%>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label>Contact Number</label>
+              <input type="tel" class="form-control" name="number" value="<%= contact.number%>" placeholder="123-456-7891" required>
+              <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" -->
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn bgstandardcolor text-light">Save</button>
+            </div>
+          </form>  
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('partials/bottom_nav'); -%>
+<%- include('partials/footer'); -%>
+<!-- /include footer -->

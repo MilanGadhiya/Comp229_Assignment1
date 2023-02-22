@@ -3,11 +3,19 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+let dotenv = require('dotenv');
+let bodyparser = require("body-parser");
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
 let app = express();
+
+dotenv.config( { path : 'config.env'} )
+
+// parse request to body-parser
+app.use(bodyparser.urlencoded({ extended : true}))
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -18,6 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'server')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', indexRouter);
