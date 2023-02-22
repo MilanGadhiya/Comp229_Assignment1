@@ -3,6 +3,24 @@ var express = require('express');
 var controller = require('../server/controller/controller');
 var router = express.Router();
 var axios = require('axios');
+var getBaseUrl = () => {
+  // custom base URL logic examples:
+  // - to request a current URL without the search parameters part:
+  let baseUrl = window.location.href.slice(0, -window.location.search.length);
+
+  //// or to insert '/api' after the host part
+  //let baseUrl = window.location.host + '/api' + window.location.pathname;
+
+  // ensure slash at the end
+  if (baseUrl[baseUrl.length - 1] != '/') baseUrl = baseUrl + '/';
+
+  return baseUrl;
+};
+
+var axiosConfig = {
+  baseURL: this.getBaseUrl(),
+};
+var axiosInstance = axios.create(axiosConfig);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -30,7 +48,7 @@ router.get('/services', function(req, res, next) {
 });
 
 router.get('/contactlist', function(req, res, next) {
-  axios.get('http://localhost:3000/api/contactlist')
+  axiosInstance.get('/contactlist')
       .then(function(response){
           res.render('contactlist', { users : response.data, title: 'ContactList' });
       })
