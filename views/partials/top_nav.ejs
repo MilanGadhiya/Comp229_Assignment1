@@ -20,37 +20,39 @@
             <a class="nav-link" aria-current="page" href="/home">Home</a>
           </li>
 
-          <% if(title == "About"){ %>
-            <li class="nav-item mx-2 active">
-          <%} else { %>
-            <li class="nav-item mx-2">
-          <%} %>
-            <a class="nav-link" aria-current="page" href="/about">About</a>
-          </li>
-          
-          <% if(title == "Projects"){ %>
-            <li class="nav-item mx-2 active">
-          <%} else { %>
-            <li class="nav-item mx-2">
-          <%} %>
-            <a class="nav-link" aria-current="page" href="/projects">Projects</a>
-          </li>
+          <% if (isAuthenticated){ %>
+            <% if(title == "About"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/about">About</a>
+            </li>
+            <% if(title == "Projects"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/projects">Projects</a>
+            </li>
+            <% if(title == "Services"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/services">Services</a>
+            </li>
+          <% } %>
 
-          <% if(title == "Services"){ %>
-            <li class="nav-item mx-2 active">
-          <%} else { %>
-            <li class="nav-item mx-2">
-          <%} %>
-            <a class="nav-link" aria-current="page" href="/services">Services</a>
-          </li>
-
-          <% if(title == "ContactList"){ %>
-            <li class="nav-item mx-2 active">
-          <%} else { %>
-            <li class="nav-item mx-2">
-          <%} %>
-            <a class="nav-link" aria-current="page" href="/contactlist">Contact List</a>
-          </li>
+          <% if (isAuthenticated){ %>
+            <% if(title == "ContactList"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/contactlist">Contact List</a>
+            </li>
+          <% } %>
 
           <% if(title == "Contact"){ %>
             <li class="nav-item mx-2 active">
@@ -59,6 +61,16 @@
           <%} %>
             <a class="nav-link" aria-current="page" href="/contact">Contact Us</a>
           </li>
+
+          <% if (isAuthenticated){ %>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="/logout">Logout</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="/login">Login</a>
+            </li>
+          <% } %>
         </ul>
       </div>
     </div>

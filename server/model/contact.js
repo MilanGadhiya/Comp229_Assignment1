@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var schema = new mongoose.Schema({
+var contactSchema = new mongoose.Schema({
     name : {
         type : String,
         required: true
@@ -16,6 +16,6 @@ var schema = new mongoose.Schema({
       }
 })
 
-const Contactdb = mongoose.model('contactdb', schema);
+const Contactdb = mongoose.model('Contactdb', contactSchema);
 
 module.exports = Contactdb;

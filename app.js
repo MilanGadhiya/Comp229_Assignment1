@@ -6,8 +6,10 @@ let logger = require('morgan');
 let dotenv = require('dotenv');
 let bodyparser = require("body-parser");
 
-let indexRouter = require('./routes/index');
-let usersRouter = require('./routes/users');
+// modules for authentication
+let session = require('express-session');
+let passport = require('passport');
+let flash = require('connect-flash');
 
 let app = express();
 
@@ -29,13 +31,42 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'server')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
+const connectDB = require('./server/database/connection');
+// mongodb connection
+connectDB();
+
+let indexRouter = require('./routes/index');
+let usersRouter = require('./routes/users');
+
+app.use(
+  session({
+    secret: "SomeSecret",
+    saveUninitialized: false,
+    resave: false,
+  })
+);
+
+//initialize flash
+app.use(flash());
+
+//intialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(function(req, res, next){
+  res.locals.isAuthenticated = req.isAuthenticated();
+  next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {

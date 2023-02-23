@@ -8,9 +8,9 @@ var app = require('./app');
 var debug = require('debug')('assignment1:server');
 var http = require('http');
 
-const connectDB = require('./server/database/connection');
-// mongodb connection
-connectDB();
+// const connectDB = require('./server/database/connection');
+// // mongodb connection
+// connectDB();
 /**
  * Get port from environment and store in Express.
  */

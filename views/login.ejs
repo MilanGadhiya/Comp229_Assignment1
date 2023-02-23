@@ -1,0 +1,26 @@
+<!-- login.ejs Milan Gadhiya 301297324 08/02/2023-->
+<%- include('partials/header', {title:'Login'}); -%>
+<%- include('partials/top_nav') %>
+
+  <!-- Start Login Area -->
+  <div class="container my-5" style="width: 40%;">
+    <div class="form-title text-center">
+        <h2>Login</h2>
+    </div>
+    <form action="/login" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn bgstandardcolor text-light w-100" style="margin-top: 10px;">Sign In</button>
+      </form>
+  </div>
+  <!-- End Login Area -->
+
+<%- include('partials/bottom_nav'); -%>
+<%- include('partials/footer'); -%>
