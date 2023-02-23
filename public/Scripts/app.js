@@ -1,10 +1,3 @@
-// (function () {
-//     function start() {
-//         console.log("App Started...");
-//     }
-//     window.addEventListener("load", start)
-// })();
-
 $("#add_contact").submit(function(event){
     alert("Data Inserted Successfully!");
 })
@@ -19,7 +12,7 @@ $("#update_contact").submit(function(event){
     })
 
     var request = {
-        "url" : `http://localhost:3000/api/contactlist/${data.id}`,
+        "url" : `https://comp229-assignment1-milangadhiya.onrender.com/api/contactlist/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -36,7 +29,7 @@ if(window.location.pathname == "/contactlist"){
         var id = $(this).attr("data-id")
         console.log(id);
         var request = {
-            "url" : `http://localhost:3000/api/contactlist/${id}`,
+            "url" : `https://comp229-assignment1-milangadhiya.onrender.com/api/contactlist/${id}`,
             "method" : "DELETE"
         }
 console.log("sdsdf");

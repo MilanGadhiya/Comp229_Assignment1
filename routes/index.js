@@ -44,7 +44,7 @@ router.get('/services', function(req, res, next) {
 
 router.get('/contactlist', function(req, res, next) {
   if(req.isAuthenticated()){
-    axios.get('http://localhost:3000/api/contactlist')
+    axios.get('https://comp229-assignment1-milangadhiya.onrender.com/api/contactlist')
     .then(function(response){
         res.render('contactlist', { users : response.data, title: 'ContactList' });
     })
@@ -63,7 +63,7 @@ router.get('/add-contact', function(req, res, next) {
 });
 
 router.get('/update-contact', function(req, res, next) {
-  axios.get('http://localhost:3000/api/contactlist', { params : { id : req.query.id }})
+  axios.get('https://comp229-assignment1-milangadhiya.onrender.com/api/contactlist', { params : { id : req.query.id }})
       .then(function(contactdata){
           res.render("update_contact", { title: 'Update Contact', contact : contactdata.data})
       })
